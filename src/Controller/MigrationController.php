@@ -67,7 +67,6 @@ class MigrationController extends AbstractController
             
             $empresaMigration->setProvincia($this->getProvincia($provincia));
             
-            //hardcode
             $empresaMigration->setIsSantafesina(false);
             
             $logger->info("Persist Empresa " . $empresaMigration->getRazonSocial());
@@ -128,7 +127,13 @@ class MigrationController extends AbstractController
     }
     
     private function getStringIntro(?string $intro): ?string {
-        return  substr(strip_tags($intro), 0 , 1020)."...";
+        $descripcion = substr(strip_tags($intro), 0 , 1020);
+        if(!empty($descripcion)){
+            $descripcion = html_entity_decode($descripcion);
+            $descripcion .= "...";
+        }
+        
+        return $descripcion;
     }
     
     private function formatCuit(?string $cuit): ?string {

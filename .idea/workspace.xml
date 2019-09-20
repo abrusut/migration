@@ -2,234 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba6648ae-4d97-4fd5-8b87-62b415c72485" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../deployapp/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/.huskyrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/.prettierignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/.prettierrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/.yo-rc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/angular.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/postcss.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/proxy.conf.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/sonar-project.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/account.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/account.route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/activate/activate.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/activate/activate.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/activate/activate.route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/activate/activate.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/password-reset/finish/password-reset-finish.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/password-reset/finish/password-reset-finish.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/password-reset/finish/password-reset-finish.route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/password-reset/finish/password-reset-finish.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/password-reset/init/password-reset-init.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/password-reset/init/password-reset-init.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/password-reset/init/password-reset-init.route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/password-reset/init/password-reset-init.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/password/password-strength-bar.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/password/password-strength-bar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/password/password.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/password/password.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/password/password.route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/password/password.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/register/register.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/register/register.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/register/register.route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/register/register.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/settings/settings.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/settings/settings.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/account/settings/settings.route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/admin.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/admin.route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/audits/audit-data.model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/audits/audit.model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/audits/audits.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/audits/audits.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/audits/audits.route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/audits/audits.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/configuration/configuration.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/configuration/configuration.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/configuration/configuration.route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/configuration/configuration.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/docs/docs.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/docs/docs.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/docs/docs.route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/health/health-modal.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/health/health-modal.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/health/health.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/health/health.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/health/health.route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/health/health.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/logs/log.model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/logs/logs.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/logs/logs.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/logs/logs.route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/logs/logs.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/metrics/metrics.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/metrics/metrics.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/metrics/metrics.route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/metrics/metrics.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/user-management/user-management-delete-dialog.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/user-management/user-management-delete-dialog.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/user-management/user-management-detail.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/user-management/user-management-detail.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/user-management/user-management-update.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/user-management/user-management-update.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/user-management/user-management.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/user-management/user-management.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/admin/user-management/user-management.route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/app-routing.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/app.constants.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/app.main.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/app.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/blocks/config/prod.config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/blocks/config/uib-pagination.config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/blocks/interceptor/auth-expired.interceptor.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/blocks/interceptor/auth.interceptor.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/blocks/interceptor/errorhandler.interceptor.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/blocks/interceptor/notification.interceptor.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/core/auth/account.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/core/auth/auth-jwt.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/core/auth/csrf.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/core/auth/state-storage.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/core/auth/user-route-access-service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/core/core.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/core/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/core/login/login-modal.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/core/login/login.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/core/user/account.model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/core/user/user.model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/core/user/user.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/entities/entity.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/home/home.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/home/home.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/home/home.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/home/home.route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/home/home.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/home/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/layouts/error/error.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/layouts/error/error.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/layouts/error/error.route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/layouts/footer/footer.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/layouts/footer/footer.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/layouts/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/layouts/main/main.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/layouts/main/main.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/layouts/navbar/navbar.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/layouts/navbar/navbar.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/layouts/navbar/navbar.route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/layouts/navbar/navbar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/layouts/profiles/page-ribbon.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/layouts/profiles/page-ribbon.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/layouts/profiles/profile-info.model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/layouts/profiles/profile.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/polyfills.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/shared/alert/alert-error.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/shared/alert/alert.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/shared/auth/has-any-authority.directive.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/shared/constants/error.constants.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/shared/constants/input.constants.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/shared/constants/pagination.constants.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/shared/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/shared/login/login.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/shared/login/login.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/shared/shared-common.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/shared/shared-libs.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/shared/shared.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/shared/util/datepicker-adapter.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/shared/util/request-util.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/app/vendor.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/css/loading.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/jhipster_family_member_0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/jhipster_family_member_0_head-192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/jhipster_family_member_0_head-256.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/jhipster_family_member_0_head-384.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/jhipster_family_member_0_head-512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/jhipster_family_member_1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/jhipster_family_member_1_head-192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/jhipster_family_member_1_head-256.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/jhipster_family_member_1_head-384.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/jhipster_family_member_1_head-512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/jhipster_family_member_2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/jhipster_family_member_2_head-192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/jhipster_family_member_2_head-256.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/jhipster_family_member_2_head-384.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/jhipster_family_member_2_head-512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/jhipster_family_member_3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/jhipster_family_member_3_head-192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/jhipster_family_member_3_head-256.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/jhipster_family_member_3_head-384.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/jhipster_family_member_3_head-512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/images/logo-jhipster.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/scss/_bootstrap-variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/scss/global.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/content/scss/vendor.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/manifest.webapp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/swagger-ui/dist/images/throbber.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/main/webapp/swagger-ui/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/jest-global-mocks.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/jest.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/jest.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/account/activate/activate.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/account/password-reset/finish/password-reset-finish.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/account/password-reset/init/password-reset-init.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/account/password/password-strength-bar.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/account/password/password.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/account/register/register.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/account/settings/settings.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/admin/audits/audits.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/admin/audits/audits.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/admin/configuration/configuration.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/admin/configuration/configuration.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/admin/health/health.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/admin/logs/logs.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/admin/logs/logs.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/admin/metrics/metrics.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/admin/metrics/metrics.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/admin/user-management/user-management-delete-dialog.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/admin/user-management/user-management-detail.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/admin/user-management/user-management-update.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/admin/user-management/user-management.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/core/user/account.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/core/user/user.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/shared/alert/alert-error.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/app/shared/login/login.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/helpers/mock-account.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/helpers/mock-active-modal.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/helpers/mock-alert.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/helpers/mock-event-manager.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/helpers/mock-login.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/helpers/mock-route.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/helpers/mock-state-storage.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/helpers/spyobject.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/src/test/javascript/spec/test.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/tsconfig-aot.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/tslint.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/webpack/logo-jhipster.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/webpack/utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/webpack/webpack.common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/webpack/webpack.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployapp/webpack/webpack.prod.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../licenciaCyP" beforeDir="false" afterPath="$PROJECT_DIR$/../licenciaCyP" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyectoTerminado/expenses-api" beforeDir="false" afterPath="$PROJECT_DIR$/../proyectoTerminado/expenses-api" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../s4apiPlatform" beforeDir="false" afterPath="$PROJECT_DIR$/../s4apiPlatform" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webpack/logo-jhipster.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webpack/utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webpack/webpack.common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webpack/webpack.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webpack/webpack.prod.js" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/oferta-exportable-migrate.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MigrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MigrationController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -244,7 +20,7 @@
     </execution>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpDebugGeneral" xdebug_debug_port="9003" />
   <component name="PhpServers">
@@ -396,7 +172,7 @@
       <workItem from="1568804815443" duration="11797000" />
       <workItem from="1568892530268" duration="6130000" />
       <workItem from="1568899493161" duration="2085000" />
-      <workItem from="1568977917261" duration="1240000" />
+      <workItem from="1568977917261" duration="3316000" />
     </task>
     <servers />
   </component>
@@ -424,7 +200,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/Controller/MigrationController.php</url>
-          <line>152</line>
+          <line>157</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -434,13 +210,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/Controller/MigrationController.php</url>
-          <line>174</line>
+          <line>179</line>
           <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/Controller/MigrationController.php</url>
-          <line>87</line>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
