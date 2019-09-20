@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba6648ae-4d97-4fd5-8b87-62b415c72485" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/oferta-exportable-migrate.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oferta-exportable-migrate.sql" beforeDir="false" afterPath="$PROJECT_DIR$/oferta-exportable-migrate.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/MigrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MigrationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/NexoEmpresa/Actividad.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/NexoEmpresa/Actividad.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/NexoEmpresa/Empresa.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/NexoEmpresa/Empresa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/NexoEmpresa/EmpresaMigration.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/NexoEmpresa/EmpresaMigration.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -172,7 +174,9 @@
       <workItem from="1568804815443" duration="11797000" />
       <workItem from="1568892530268" duration="6130000" />
       <workItem from="1568899493161" duration="2085000" />
-      <workItem from="1568977917261" duration="3316000" />
+      <workItem from="1568977917261" duration="4027000" />
+      <workItem from="1568988480458" duration="1130000" />
+      <workItem from="1568991282337" duration="6321000" />
     </task>
     <servers />
   </component>
@@ -199,18 +203,13 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/Controller/MigrationController.php</url>
-          <line>157</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/vendor/symfony/http-foundation/JsonResponse.php</url>
           <line>155</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/Controller/MigrationController.php</url>
-          <line>179</line>
+          <line>206</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
@@ -218,6 +217,7 @@
     <watches-manager>
       <configuration name="PhpWebAppRunConfigurationType">
         <watch expression="$oexempresa-&gt;getIntro()" />
+        <watch expression="$repository-&gt;findBy(array(&quot;codigo&quot;=&gt;$codigo))" />
       </configuration>
     </watches-manager>
   </component>

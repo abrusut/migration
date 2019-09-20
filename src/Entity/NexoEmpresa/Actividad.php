@@ -40,7 +40,7 @@ class Actividad
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="Empresa", mappedBy="actividad")
+     * @ORM\ManyToMany(targetEntity="EmpresaMigration", mappedBy="actividad")
      */
     private $empresa;
 

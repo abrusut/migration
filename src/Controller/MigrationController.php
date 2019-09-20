@@ -3,6 +3,7 @@
 
 namespace App\Controller;
 
+use App\Entity\NexoEmpresa\Actividad;
 use App\Entity\NexoEmpresa\Empresa;
 use App\Entity\NexoEmpresa\EmpresaMigration;
 use App\Entity\NexoEmpresa\Localidad;
@@ -29,6 +30,7 @@ class MigrationController extends AbstractController
      */
     public function migrate(Request $request,LoggerInterface $logger)
     {
+        ini_set('memory_limit', '-1');
         $logger->info("start migration");
         $repository = $this->getDoctrine()->getRepository(OexEmpresas::class);
         $em = $this->getDoctrine()->getManager('ofertaexportable');
@@ -77,13 +79,14 @@ class MigrationController extends AbstractController
         $logger->info("Flush Empresas ");
         $emNexo->flush();
         
-        $allEmpresasProcesadasApi = $this->validateIsSantafesina($logger);
+        $allEmpresasProcesadasApi = $this->validateIsSantafesinaAndSetActividad($logger);
+        
         
         return $this->json(array("response" => "Se procesaron ".$cantidadEmpresas. " de empresas, todas fueron procesadas por API ".$allEmpresasProcesadasApi));
         
     }
     
-    private function validateIsSantafesina(LoggerInterface $logger) {
+    private function validateIsSantafesinaAndSetActividad(LoggerInterface $logger) {
         $logger->info("start validando si es santafesina");
         $repository = $this->getDoctrine()->getRepository(EmpresaMigration::class);
         $emNexo = $this->getDoctrine()->getManager('default');
@@ -105,7 +108,7 @@ class MigrationController extends AbstractController
             $result = $soapclient->__soapCall("getContribuyente", $parametros, array(), $this->wssecurity_header());
     
             $logger->info("Result WebService is ".json_encode($result));
-            if ($result['codigo_respuesta'] == 200) {
+            if ($result != null && $result['codigo_respuesta'] == 200) {
                 $empresasMigration->setRazonSocial($result['razon_social']);
                 $empresasMigration->setIsSantafesina(true);
     
@@ -114,11 +117,35 @@ class MigrationController extends AbstractController
                 $empresasMigration->setIsSantafesina(false);
             }
             
+            if($result != null && isset($result['actividades'])){
+                foreach ($result['actividades'] as $actividad) {
+                    /** @var Actividad $actividadEnNexoEmpresa */
+                    $actividadEnNexoEmpresa = $this->getActividadByCode($actividad['COD_ACT']);
+                    
+                    if($actividadEnNexoEmpresa != null && is_object($actividadEnNexoEmpresa)){
+                        
+                        if($empresasMigration->getActividad() != null
+                            && !$empresasMigration->getActividad()->contains($actividadEnNexoEmpresa) )
+                            $empresasMigration->addActividad($actividadEnNexoEmpresa);
+                    }
+                }
+                
+            }
+            
         }
     
         $emNexo->flush();
         
         return true;
+    }
+    
+    /**
+     * @param $codigo
+     * @return Actividad|null
+     */
+    private function getActividadByCode($codigo):?Actividad {
+        $repository = $this->getDoctrine()->getRepository(Actividad::class);
+        return $repository->findOneByCodigo($codigo);
     }
     
     private function getProvinciaSantaFe(): ?Provincia {

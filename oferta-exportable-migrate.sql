@@ -1,4 +1,13 @@
 use mprod_nexoempresa;
+
+CREATE TABLE `empresamigration_actividad` (
+  `empresamigration_id` int(11) NOT NULL,
+  `actividad_id` int(11) NOT NULL,
+  PRIMARY KEY (`empresamigration_id`,`actividad_id`),
+  KEY `IDX_181442F79521E1991` (`empresamigration_id`),
+  KEY `IDX_181442F796014FACA` (`actividad_id`)  
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 CREATE TABLE `empresa_migration` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `provincia_id` int(11) DEFAULT NULL,

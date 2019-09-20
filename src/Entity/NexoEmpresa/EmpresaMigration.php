@@ -183,6 +183,25 @@ class EmpresaMigration
     private $localidad;
     
     /**
+     * Many Empresa have Many Actividades.
+     * @ORM\ManyToMany(targetEntity="Actividad")
+     * JoinTable(name="empresamigration_actividad",
+     *      joinColumns={@JoinColumn(name="actividad_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@JoinColumn(name="empresa_id", referencedColumnName="id")}
+     *      )
+     */
+    private $actividad;
+    
+    
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->actividad = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
      * @return int
      */
     public function getId(): int
@@ -564,7 +583,29 @@ class EmpresaMigration
     {
         return $this->isSantafesina;
     }
-
     
+    /**
+     * Add actividad
+     *
+     * @param Actividad $actividad
+     *
+     * @return Empresa
+     */
+    public function addActividad(Actividad $actividad)
+    {
+        $this->actividad[] = $actividad;
+        
+        return $this;
+    }
+    
+    /**
+     * Remove actividad
+     *
+     * @param Actividad $actividad
+     */
+    public function removeActividad(Actividad $actividad)
+    {
+        $this->actividad->removeElement($actividad);
+    }
 
 }
