@@ -9,18 +9,21 @@ use App\Entity\NexoEmpresa\EmpresaMigration;
 use App\Entity\NexoEmpresa\Localidad;
 use App\Entity\NexoEmpresa\Provincia;
 use App\Entity\OfertaExportable\OexEmpresas;
+use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Psr\Log\LoggerInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
+use FOS\RestBundle\Controller\Annotations as Rest;
+use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\Serializer\Serializer;
 /**
- * @Route("/migration")
+ * @Route("/migration", name="api_migration")
  */
-class MigrationController extends AbstractController
+class MigrationController extends FOSRestController
 {
     private $username = "#usDaCon2#";
     private $password = "%A21d62%";
@@ -31,57 +34,66 @@ class MigrationController extends AbstractController
     public function migrate(Request $request,LoggerInterface $logger)
     {
         ini_set('memory_limit', '-1');
-        $logger->info("start migration");
-        $repository = $this->getDoctrine()->getRepository(OexEmpresas::class);
-        $em = $this->getDoctrine()->getManager('ofertaexportable');
-        $emNexo = $this->getDoctrine()->getManager('default');
-        $oexempresas = $repository->findAll();
-    
-        $cantidadEmpresas = 0;
-        /** @var OexEmpresas $oexempresa */
-        foreach ($oexempresas as $oexempresa) {
-            if($oexempresa->getCuit() === null || empty($oexempresa->getCuit()))
-                continue;
-            
-            $empresaMigration = new EmpresaMigration();
-            $empresaMigration->setCodigoPostal($oexempresa->getCodigoPostal());
-            $empresaMigration->setCuit($this->formatCuit($oexempresa->getCuit()));
-            $empresaMigration->setDescripcion($this->getStringIntro($oexempresa->getIntro()));
-            $empresaMigration->setDomicilio($oexempresa->getDomicilio());
-            $empresaMigration->setDistritoOtraProvincia($oexempresa->getDepartamento() . "-" . $oexempresa->getLocalidad());
-            $empresaMigration->setNombreComercial($oexempresa->getNombre() != null ? $oexempresa->getNombre() : $oexempresa->getRazonSocial()  );
-            $empresaMigration->setPaginaWeb($oexempresa->getWebsite());
-            $empresaMigration->setRazonSocial($oexempresa->getRazonSocial());
-            $empresaMigration->setTelefono($oexempresa->getTelefono());
-            $empresaMigration->setSearch($oexempresa->getRazonSocial() . " " . $oexempresa->getNombre());
-            
-            $localidad = $oexempresa->getLocalidad();
-            if($localidad != null && !empty($localidad)){
-                $empresaMigration->setLocalidad($this->getLocalidad($localidad));
-            }else{
-                $empresaMigration->setLocalidad(null);
+        ini_set('max_execution_time', '60000');
+ 
+            $logger->info("start migration");
+            $repository = $this->getDoctrine()->getRepository(OexEmpresas::class);
+            $em = $this->getDoctrine()->getManager('ofertaexportable');
+            $emNexo = $this->getDoctrine()->getManager('default');
+            $oexempresas = $repository->findAll();
+            $repositoryNexo = $this->getDoctrine()->getRepository(EmpresaMigration::class);
+            $cantidadEmpresas = 0;
+            /** @var OexEmpresas $oexempresa */
+            foreach ($oexempresas as $oexempresa) {
+                if($oexempresa->getCuit() === null || empty($oexempresa->getCuit()))
+                    continue;
+                
+                $empresaMigration = new EmpresaMigration();
+                $empresaMigration->setCodigoPostal($oexempresa->getCodigoPostal());
+                $empresaMigration->setCuit($this->formatCuit($oexempresa->getCuit()));
+                $empresaMigration->setDescripcion($this->getStringIntro($oexempresa->getIntro()));
+                $empresaMigration->setDomicilio($oexempresa->getDomicilio());
+                $empresaMigration->setDistritoOtraProvincia($oexempresa->getDepartamento() . "-" . $oexempresa->getLocalidad());
+                $empresaMigration->setNombreComercial($oexempresa->getNombre() != null ? $oexempresa->getNombre() : $oexempresa->getRazonSocial()  );
+                $empresaMigration->setPaginaWeb($oexempresa->getWebsite());
+                $empresaMigration->setRazonSocial($oexempresa->getRazonSocial());
+                $empresaMigration->setTelefono($oexempresa->getTelefono());
+                $empresaMigration->setSearch($oexempresa->getRazonSocial() . " " . $oexempresa->getNombre());
+                
+                $localidad = $oexempresa->getLocalidad();
+                if($localidad != null && !empty($localidad)){
+                    $empresaMigration->setLocalidad($this->getLocalidad($localidad));
+                }else{
+                    $empresaMigration->setLocalidad(null);
+                }
+                
+                $provincia = $oexempresa->getDepartamento();
+                if(!$provincia){
+                    $provincia = ($oexempresa->getLocalidad() != null ? $oexempresa->getLocalidad() : 'Santa Fe');
+                }
+                
+                $empresaMigration->setProvincia($this->getProvincia($provincia));
+                
+                $empresaMigration->setIsSantafesina(false);
+                
+                $logger->info("Persist Empresa " . $empresaMigration->getRazonSocial());
+                $saveOk = 0;
+                $existeEmpresa = $repositoryNexo->findBy(array('cuit'=>$empresaMigration->getCuit()));
+                if($existeEmpresa != null && count($existeEmpresa)>0)
+                    continue;
+                
+                $emNexo->persist($empresaMigration);
+                $emNexo->flush();
+                $cantidadEmpresas++;
             }
-            
-            $provincia = $oexempresa->getDepartamento();
-            if(!$provincia){
-                $provincia = ($oexempresa->getLocalidad() != null ? $oexempresa->getLocalidad() : 'Santa Fe');
-            }
-            
-            $empresaMigration->setProvincia($this->getProvincia($provincia));
-            
-            $empresaMigration->setIsSantafesina(false);
-            
-            $logger->info("Persist Empresa " . $empresaMigration->getRazonSocial());
-            $emNexo->persist($empresaMigration);
-            $cantidadEmpresas++;
-        }
     
-        $logger->info("Flush Empresas ");
-        $emNexo->flush();
+            
         
-        $allEmpresasProcesadasApi = $this->validateIsSantafesinaAndSetActividad($logger);
-        
-        
+            $logger->info("Flush Empresas ");
+            
+            $allEmpresasProcesadasApi = $this->validateIsSantafesinaAndSetActividad($logger);
+    
+       
         return $this->json(array("response" => "Se procesaron ".$cantidadEmpresas. " de empresas, todas fueron procesadas por API ".$allEmpresasProcesadasApi));
         
     }
@@ -185,54 +197,48 @@ class MigrationController extends AbstractController
         $limit = $request->get('limit', 10);
         $repository = $this->getDoctrine()->getRepository(Empresa::class);
         $items = $repository->findAll();
+        return $this->handleView($this->view($items));
         
-        return $this->json(
-            [
-                'page' => $page,
-                'limit' => $limit,
-                'data' => array_map(function (Empresa $item) {
-                    return $this->generateUrl('nexo_empresa_by_id', ['id' => $item->getId()]);
-                }, $items)
-            ]
-        );
     }
     
     /**
-     * @Route("/nexo/empresa/{id}", name="nexo_empresa_by_id", methods={"GET"},requirements={"id"="\d+"})
+     * @Rest\Get("/nexo/empresa/{id}", name="nexo_empresa_by_id", methods={"GET"},requirements={"id"="\d+"})
      * @ParamConverter("empresa", class="NexoEmpresa:Empresa", options={"entity_manager" = "default"})
+     * @return Response
+     * @throws \Exception
      */
     public function nexoEmpresaById(Empresa $empresa,LoggerInterface $logger)
     {
-        try{
-            $empresaJson = $this->json($empresa);
-        }catch (\Exception $exception){
-            $logger->error($exception);
-            throw $exception;
-        }
-        
-        
-        return $empresaJson;
-        
+        return $this->handleView($this->view($empresa));
     }
     
+    
+    
     /**
-     * @Route("/oexportable/{page}", name="oexportable_empesas_list", defaults={"page": 5}, requirements={"page"="\d+"})
+     * @Rest\Get("/oexportable/{page}", name="oexportable_empesas_list", defaults={"page": 5}, requirements={"page"="\d+"})
      */
     public function listEmpresaOfertaExportable($page = 1, Request $request)
     {
         $limit = $request->get('limit', 10);
         $repository = $this->getDoctrine()->getRepository(OexEmpresas::class);
         $items = $repository->findAll();
+    
+        return $this->handleView($this->view($items));
+    }
+    
+    /**
+     * @Rest\Post("/oexportable", name="oexportable_empesas_post")
+     * @ParamConverter("empresaMigration", converter="fos_rest.request_body")
+     */
+    public function saveEmpresaOfertaExportable(Request $request, EmpresaMigration $empresaMigration)
+    {
+        /** @var EmpresaMigration $data */
+        $data=json_decode($request->getContent(),true);
+        $em = $this->getDoctrine()->getManager('default');
         
-        return $this->json(
-            [
-                'page' => $page,
-                'limit' => $limit,
-                'data' => array_map(function (OexEmpresas $item) {
-                    return $this->generateUrl('oexportable_oxempesas_by_id', ['id' => $item->getId()]);
-                }, $items)
-            ]
-        );
+        $em->persist($empresaMigration);
+        $em->flush();
+        return $this->handleView($this->view($empresaMigration));
     }
     
     /**
